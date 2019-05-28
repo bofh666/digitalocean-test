@@ -1,5 +1,8 @@
 ---
 
 mongodb_replication_params:
-  - host_name: "{{ hostvars[inventory_hostname].ansible_default_ipv4.address }}"
-    host_type: arbiter
+  - {
+      host_name: "{{ hostvars[inventory_hostname].ansible_default_ipv4.address }}",
+      host_port: "{{ mongodb_net_port }}",
+      host_type: arbiter,
+    }
