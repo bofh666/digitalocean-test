@@ -48,15 +48,15 @@ resource "null_resource" "ansible-provision" {
   }
 
   provisioner "local-exec" {
-    command = "echo '${digitalocean_droplet.mongo-test1.name} ansible_host=${digitalocean_droplet.mongo-test1.ipv4_address} ansible_ssh_user=root' >> hosts"
+    command = "echo '${digitalocean_droplet.mongo-test1.name} ansible_host=${digitalocean_droplet.mongo-test1.ipv4_address}' >> hosts"
   }
 
   provisioner "local-exec" {
-    command = "echo '${digitalocean_droplet.mongo-test2.name} ansible_host=${digitalocean_droplet.mongo-test2.ipv4_address} ansible_ssh_user=root' >> hosts"
+    command = "echo '${digitalocean_droplet.mongo-test2.name} ansible_host=${digitalocean_droplet.mongo-test2.ipv4_address}' >> hosts"
   }
 
   provisioner "local-exec" {
-    command = "echo '${digitalocean_droplet.mongo-test3.name} ansible_host=${digitalocean_droplet.mongo-test3.ipv4_address} ansible_ssh_user=root' >> hosts"
+    command = "echo '${digitalocean_droplet.mongo-test3.name} ansible_host=${digitalocean_droplet.mongo-test3.ipv4_address}' >> hosts"
   }
 
   provisioner "local-exec" {
