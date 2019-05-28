@@ -9,8 +9,8 @@ provider "digitalocean" {
 }
 
 # Create a new SSH key
-resource "digitalocean_ssh_key" "ins_default" {
-  name       = "InSales testcase"
+resource "digitalocean_ssh_key" "default" {
+  name       = "test"
   public_key = "${file("~/.ssh/test.pub")}"
 }
 
