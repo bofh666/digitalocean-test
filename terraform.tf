@@ -5,15 +5,16 @@ variable "do_size" {}
 
 provider "digitalocean" {
   token = "${var.do_token}"
+  version = "~> 1.3"
 }
 
 # Create a new SSH key
 resource "digitalocean_ssh_key" "ins_default" {
   name       = "InSales testcase"
-  public_key = "${file("~/.ssh/id_rsa.pub")}"
+  public_key = "${file("~/.ssh/test.pub")}"
 }
 
-# create two demo droplets
+# create three demo droplets
 resource "digitalocean_droplet" "mongo-test1" {
   name     = "mongo-test1"
   image    = "${var.do_image}"
