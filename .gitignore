@@ -7,3 +7,12 @@
 
 # .tfvars files
 *.tfvars
+
+.DS_Store
+.vscode
+
+vendor
+
+*.retry
+
+hosts

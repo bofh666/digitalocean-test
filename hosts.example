@@ -1,0 +1,10 @@
+[mongo_master]
+mongo-test1
+
+[mongo_replicas]
+mongo-test2
+mongo-test3
+
+[mongo:children]
+mongo_master
+mongo_replicas
